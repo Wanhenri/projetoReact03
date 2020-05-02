@@ -1,0 +1,24 @@
+{
+  "name": "projetoreact03",
+  "version": "0.0.1",
+  "description": "teste",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Wanhenri/projetoReact03.git"
+  },
+  "keywords": [
+    "package",
+    "manager",
+    "tutorial"
+  ],
+  "author": "Wanderson Santos",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Wanhenri/projetoReact03/issues"
+  },
+  "homepage": "https://github.com/Wanhenri/projetoReact03#readme"
+}
