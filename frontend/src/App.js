@@ -10,7 +10,9 @@ function App() {
 
   return (
     <div>
-      <h1 className='text-4xl'>Hello Poppers!</h1>
+      <header className='bg-teal-500 mb-12'>
+        <img src='/images/header-background.png' alt="bg-image" width={2600} />
+      </header>
       {jobs.length === 0 ? (
         <p>Jobs are fetching...</p>
       ) : (
