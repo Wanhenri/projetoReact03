@@ -16,7 +16,9 @@ const JobBoardComponent = ({
         location,
         languages,
         tools
-}}) => {
+    },
+    handleTagClick,    
+    }) => {
     const tags = [ role, level];
 
     if (languages) {
@@ -39,7 +41,7 @@ const JobBoardComponent = ({
            featured 
             && 
               'border-l-4 border-teal-500 border-solid'
-         } sm:flex-row`}>
+         } lg:flex-row lg:my-4`}>
         <div>
             <img 
               className='
@@ -47,7 +49,7 @@ const JobBoardComponent = ({
                   mb-4 
                   w-20 
                   h-30 
-                  sm:my-0 sm:h-19 sm:w-24' 
+                  lg:my-0 lg:h-19 lg:w-24' 
                   src={logo} 
                   alt={company} 
                   width={200} 
@@ -74,7 +76,7 @@ const JobBoardComponent = ({
                         py-1 
                         px-2 
                         rounded-full 
-                        uppercase text-sm'>
+                        uppercase text-lg'>
                           New!
                     </span>
                   )}
@@ -88,7 +90,7 @@ const JobBoardComponent = ({
                         py-1 
                         px-2 
                         rounded-full 
-                        uppercase text-sm'>
+                        uppercase text-lg'>
                           Featured
                     </span>
                 )}
@@ -98,7 +100,7 @@ const JobBoardComponent = ({
               className='
                 font-bold 
                 text-xl 
-                my-2 sm:my-0'>
+                my-2 lg:my-0'>
                   {position}
             </h2>
             <p 
@@ -118,20 +120,22 @@ const JobBoardComponent = ({
             border-t 
             border-gray-200 
             border-solid 
-            sm:border-0 
-            sm:pt-0 
-            sm:mt-0'>
+            lg:border-0 
+            lg:pt-0 
+            lg:mt-0'>
             {tags 
                 ? tags.map((tag) =>(
                         <span 
+                          onClick={() => handleTagClick(tag)}
                           className='
+                            cursor-pointer
                             text-teal-500 
                             bg-teal-100 
                             font-bold 
                             mr-4 
                             mb-4 
                             p-2 
-                            rounded sm:mb-0'>
+                            rounded lg:mb-0'>
                               {tag}
                         </span>
                     )) : ''}
